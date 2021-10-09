@@ -1,11 +1,12 @@
 #include <iostream>
-#include <string>
+#include <iomanip>
 
+int main(void)
 
-
-int main() {
-	std::string name;
-	name = "Sasha"
-	std::cout << name << std::endl;
-	return 0;
+{
+	std::cout << '|';
+//	std::cout.width(10);
+	std::cout.fill('.');
+	std::cout << std::setw(10) << 1001;
+	std::cout << '|'<< std::endl;
 }

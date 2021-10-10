@@ -20,11 +20,11 @@ void Contact::setContactInfo(int index) {
 
 void Contact::setContactDefault(int index) {
 	this->data[CONTACT_INDEX] = std::to_string(index);
-	this->data[CONTACT_FIRST_NAME] = "first name";
-	this->data[CONTACT_LAST_NAME] = "second long long string";
-	this->data[CONTACT_NICK_NAME] = "nick";
-	this->data[CONTACT_NUMBER] = "0583262";
-	this->data[CONTACT_SECRET] = "secret";
+	this->data[CONTACT_FIRST_NAME] = "first name" + std::to_string(index);
+	this->data[CONTACT_LAST_NAME] = "second long long string" + std::to_string(index);
+	this->data[CONTACT_NICK_NAME] = "nick" + std::to_string(index);
+	this->data[CONTACT_NUMBER] = "0583262" + std::to_string(index);
+	this->data[CONTACT_SECRET] = "secret" + std::to_string(index);
 }
 
 void Contact::showShortInfo(const int colWidth) {

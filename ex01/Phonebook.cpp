@@ -12,20 +12,20 @@ void Phonebook::showStartMsg() {
 
 void Phonebook::addContact() {
 	std::cout << MSG_ADD_NEW_CONTACT << std::endl;
-	//	this->contacts[count].setContactInfo(writeTo);
-this->contacts[writeTo].setContactDefault(writeTo);
+	this->contacts[writeTo].setContactInfo(this->writeTo + 1);
+//	this->contacts[writeTo].setContactDefault(this->writeTo + 1);
 	counter++;
 	this->writeTo = this->counter < this->maxLimit
 			? this->counter
 			: this->counter % this->maxLimit;
-	std::cout << this->counter << MSG_CONTACT_SUCCESS_ADDED << std::endl;
+	std::cout << MSG_CONTACT_SUCCESS_ADDED << std::endl;
 }
 
-int Phonebook::_findContact(std::string strIndex) {
+int Phonebook::_findContact(std::string number) {
 	int index;
 	int dataSize = this->counter < this->maxLimit ? this->counter : maxLimit;
-	index = std::stoi(strIndex);
-	if (0 < index && index < dataSize){
+	index = atoi(number.c_str()) - 1; // from number to index
+	if (0 <= index && index < dataSize){
 		return index;
 	}
 	return (-1);
@@ -66,8 +66,8 @@ void Phonebook::searchContact() {
 		}
 		std::cout << "|===========================================|" << std::endl;
 		std::cout << MSG_ENTER_CONTACTS_INDEX << std::endl;
+		Phonebook::_detailedInfoListener();
 	};
-	Phonebook::_detailedInfoListener();
 }
 
 

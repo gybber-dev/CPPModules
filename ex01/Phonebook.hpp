@@ -9,7 +9,7 @@
 # define MSG_ADD_NEW_CONTACT "Add information about the contact:"
 # define MSG_CONTACT_SUCCESS_ADDED "Contact was successfully added."
 # define MSG_NO_CONTACTS "There is no any contact in Phonebook"
-# define MSG_ENTER_CONTACTS_INDEX "Enter contact's index to view all info"
+# define MSG_ENTER_CONTACTS_INDEX "Enter contact's index to view full info"
 class Phonebook
 {
 private:

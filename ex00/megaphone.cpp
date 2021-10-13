@@ -5,7 +5,7 @@
 
 void printInUpperString(std::string word)
 {
-	for (int i = 0; i < word.length(); ++i) {
+	for (int i = 0; i < (int)word.length(); ++i) {
 		if ('a' <= word[i] && word[i] <= 'z')
 			word[i] -= 32;
 	}

@@ -30,7 +30,7 @@ void Contact::setContactDefault(int index) {
 void Contact::showShortInfo(const int colWidth) {
 	for (int info = 0; info <= CONTACT_NICK_NAME; ++info) {
 		std::cout << "|";
-		if (this->data[info].length() > colWidth) {
+		if ((int)this->data[info].length() > colWidth) {
 			std::cout.width(colWidth);
 			std::cout << std::setw(colWidth - 1) << this->data[info].substr(0, colWidth - 1);
 			std::cout << '.';

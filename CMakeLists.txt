@@ -7,15 +7,15 @@ set(CMAKE_CXX_STANDARD 98)
 # ====================================================
 # Adds list of project files
 FILE(GLOB CPP_SOURCES
-		${CMAKE_CURRENT_SOURCE_DIR}/ex01/*.cpp
-		${CMAKE_CURRENT_SOURCE_DIR}/ex01/*.hpp
-		${CMAKE_CURRENT_SOURCE_DIR}/ex01/*.h
+		${CMAKE_CURRENT_SOURCE_DIR}/ex00/*.cpp
+		${CMAKE_CURRENT_SOURCE_DIR}/ex00/*.hpp
+		${CMAKE_CURRENT_SOURCE_DIR}/ex00/*.h
 		)
 
 add_executable(
 		CPPModules
 		${CPP_SOURCES}
-		ex01/Contact.cpp)
+)
 # Local targets
 #add_executable(
 #        builtins
@@ -24,5 +24,5 @@ add_executable(
 
 target_compile_options(
 		CPPModules PRIVATE
-		#        -Wall -Wextra -Werror
+		-Wall -Wextra -Werror
 )

@@ -7,9 +7,9 @@ set(CMAKE_CXX_STANDARD 98)
 # ====================================================
 # Adds list of project files
 FILE(GLOB CPP_SOURCES
-		${CMAKE_CURRENT_SOURCE_DIR}/ex00/*.cpp
-		${CMAKE_CURRENT_SOURCE_DIR}/ex00/*.hpp
-		${CMAKE_CURRENT_SOURCE_DIR}/ex00/*.h
+        Module01/ex00/*.cpp
+        Module01/ex00/*.hpp
+        Module01/ex00/*.h
 		)
 
 add_executable(

@@ -1,6 +1,7 @@
 NAME = sed
 
 SRCS =		main.cpp
+
 INCLUDES =
 
 OBJ = $(patsubst %.cpp, %.o, $(SRCS))

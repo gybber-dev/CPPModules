@@ -3,6 +3,7 @@ NAME = ex01
 SRCS =		Zombie.cpp\
 			ZombieHorde.cpp\
 			main.cpp
+
 INCLUDES =	Zombie.hpp \
 
 OBJ = $(patsubst %.cpp, %.o, $(SRCS))

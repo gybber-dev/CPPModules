@@ -2,6 +2,7 @@ NAME = karen
 
 SRCS =		Karen.cpp\
 			main.cpp
+
 INCLUDES =	Karen.hpp \
 
 OBJ = $(patsubst %.cpp, %.o, $(SRCS))

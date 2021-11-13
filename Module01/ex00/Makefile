@@ -1,13 +1,11 @@
-NAME = ex03
+NAME = ex00
 
-SRCS =		main.cpp \
-			HumanA.cpp \
-			HumanB.cpp \
-			Weapon.cpp \
+SRCS =		Zombie.cpp\
+			newZombie.cpp\
+			randomChump.cpp\
+			main.cpp
 
-INCLUDES = HumanA.hpp \
-			HumanB.hpp \
-			Weapon.hpp \
+INCLUDES =	Zombie.hpp \
 
 OBJ = $(patsubst %.cpp, %.o, $(SRCS))
 
@@ -17,9 +15,9 @@ FLAGS = -Wall -Wextra -Werror
 
 RM = rm -f
 
-all: $(NAME) $(INCLUDE)
+all: $(NAME) $(INCLUDES)
 
-$(NAME): $(INCLUDES)  $(OBJ)
+$(NAME): $(OBJ) $(INCLUDES)
 			$(CC) $(FLAGS) $(OBJ) -std=c++98 -pedantic -o $(NAME)
 
 %.o : %.cpp

@@ -13,9 +13,10 @@ private:
 	std::string m_type;
 public:
 	Weapon();
+	Weapon(std::string const & type);
 	~Weapon();
-	const std::string& getType();
-	void setType(const std::string& type);
+	const std::string & getType () const;
+	void setType(const std::string & type);
 };
 
 #endif //CPPMODULES_WEAPON_HPP

@@ -12,14 +12,14 @@
 class HumanB {
 private:
 	std::string m_name;
-	Weapon m_weapon;
+	const Weapon *m_weapon;
 
 public:
 	HumanB();
-	HumanB(std::string name);
+	HumanB(std::string const & name);
 	~HumanB();
 	void setWeapon(const Weapon& weapon);
-	void attack()
+	void attack();
 };
 
 #endif //CPPMODULES_HUMANB_HPP

@@ -7,14 +7,15 @@ set(CMAKE_CXX_STANDARD 98)
 # ====================================================
 # Adds list of project files
 FILE(GLOB CPP_SOURCES
-        Module01/ex03/*.cpp
-        Module01/ex03/*.hpp
-        Module01/ex03/*.h
-		)
+	Module01/ex03/*.cpp
+	Module01/ex03/*.hpp
+	Module01/ex03/*.h
+)
 
 add_executable(
 		CPPModules
-		${CPP_SOURCES} Module01/ex03/main.cpp Module01/ex03/Weapon.cpp Module01/ex03/Weapon.hpp Module01/ex03/HumanA.cpp Module01/ex03/HumanB.cpp Module01/ex03/HumanA.hpp Module01/ex03/HumanB.hpp)
+		${CPP_SOURCES}
+)
 # Local targets
 #add_executable(
 #        builtins
@@ -23,5 +24,5 @@ add_executable(
 
 target_compile_options(
 		CPPModules PRIVATE
-		-Wall -Wextra -Werror
+#		-Wall -Wextra -Werror
 )

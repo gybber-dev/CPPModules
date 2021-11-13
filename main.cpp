@@ -5,6 +5,16 @@
 
 int main(int argc, char *argv[])
 {
-	std::cout << argv[1] << std::endl;
-	std::cout << argv[2] << std::endl;
+	const char * a = "a";
+	char const * c = "c";
+	a="bbbb";
+	c="dddd";
+	std::cout << a << std::endl;
+	std::cout << c << std::endl;
+
+	char * const aa = "aa";
+//	aa="bb"; // error
+
+	*aa = 'y';
+	std::cout << aa << std::endl;
 }

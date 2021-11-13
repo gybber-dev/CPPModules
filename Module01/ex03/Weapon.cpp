@@ -5,7 +5,7 @@
 #include <string>
 #include "Weapon.hpp"
 
-const std::string &Weapon::getType() {
+const std::string & Weapon::getType() const {
 	return this->m_type;
 }
 
@@ -17,4 +17,8 @@ Weapon::Weapon() {
 }
 
 Weapon::~Weapon() {
+}
+
+Weapon::Weapon(std::string const & type) {
+	this->m_type = type;
 }

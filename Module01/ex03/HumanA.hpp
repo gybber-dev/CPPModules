@@ -11,13 +11,14 @@
 
 class HumanA {
 private:
-	std::string m_name;
-	Weapon m_weapon;
+
+	const std::string m_name;
+	const Weapon &m_weapon;
 
 public:
-	HumanA();
-	HumanA(std::string name, Weapon weapon);
+	HumanA(const std::string &name, const Weapon &weapon);
 	~HumanA();
-	void attack()
+	void attack() const;
 };
+
 #endif //CPPMODULES_HUMANA_HPP

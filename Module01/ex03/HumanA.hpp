@@ -21,4 +21,4 @@ public:
 	void attack() const;
 };
 
-#endif //CPPMODULES_HUMANA_HPP
+#endif

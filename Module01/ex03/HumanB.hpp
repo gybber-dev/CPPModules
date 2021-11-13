@@ -22,4 +22,4 @@ public:
 	void attack();
 };
 
-#endif //CPPMODULES_HUMANB_HPP
+#endif

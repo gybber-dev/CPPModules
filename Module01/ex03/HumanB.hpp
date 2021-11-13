@@ -19,7 +19,7 @@ public:
 	HumanB(std::string name);
 	~HumanB();
 	void setWeapon(const Weapon& weapon);
-	void attack()
+	void attack();
 };
 
-#endif //CPPMODULES_HUMANB_HPP
+#endif

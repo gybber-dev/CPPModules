@@ -18,6 +18,6 @@ public:
 	HumanA();
 	HumanA(std::string name, Weapon weapon);
 	~HumanA();
-	void attack()
+	void attack();
 };
-#endif //CPPMODULES_HUMANA_HPP
+#endif

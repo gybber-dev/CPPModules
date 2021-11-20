@@ -1,4 +1,6 @@
 #include "Fixed.hpp"
+#include "../ex02/Fixed.hpp"
+
 
 using std::cout;
 using std::endl;
@@ -11,7 +13,7 @@ Fixed::~Fixed() {
 	cout << "Default destructor\n";
 }
 
-Fixed::Fixed(Fixed &src) {
+Fixed::Fixed(const Fixed &src) {
 	cout << "Copy constructor\n";
 	this->m_value = src.getRawBits();
 }
@@ -34,4 +36,3 @@ int Fixed::getRawBits(void) const {
 	cout << "getRawBits called\n";
 	return this->m_value;
 }
-

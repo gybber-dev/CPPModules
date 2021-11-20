@@ -11,7 +11,7 @@ Fixed::~Fixed() {
 	cout << "Default destructor\n";
 }
 
-Fixed::Fixed(Fixed &src) {
+Fixed::Fixed(const Fixed &src) {
 	cout << "Copy constructor\n";
 	this->m_value = src.getRawBits();
 }
@@ -33,12 +33,27 @@ int Fixed::getRawBits(void) const {
 }
 
 std::ostream &operator<<(std::ostream &out, const Fixed &src) {
-	out << "TODO float to fix and print\n";
+	out << src.toFloat();
 	return (out);
 }
 
 Fixed::Fixed(const int intN) {
-	cout << "Integer counstructor\n";
-	this->m_value = intN << this->s_bits;
+	cout << "Integer constructor\n";
+	this->m_value = intN << Fixed::s_bits;
+}
+
+Fixed::Fixed(const float floatN) {
+	cout << "Float constructor\n";
+	this->m_value = (int)(roundf(floatN * (1 << Fixed::s_bits)));
+}
+
+float Fixed::toFloat(void) const
+{
+	return (float)this->m_value/ (1 << Fixed::s_bits);
+}
+
+int Fixed::toInt(void) const
+{
+	return (this->m_value >> Fixed::s_bits);
 }
 

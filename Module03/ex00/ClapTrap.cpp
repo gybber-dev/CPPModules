@@ -46,3 +46,11 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &src) {
 	this->m_energyPoints  = src.m_energyPoints;
 	return *this;
 }
+
+void ClapTrap::print() const {
+	cout << "===== INFORMATION =====" << endl;
+	cout << "name: " << this->m_name << endl;
+	cout << "hitpoints: " << this->m_hitpoints << endl;
+	cout << "energyPoints: " << this->m_energyPoints << endl;
+	cout << "attackDamage: " << this->m_attackDamage << endl << endl;
+}

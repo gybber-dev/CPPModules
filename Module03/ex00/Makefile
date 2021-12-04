@@ -1,9 +1,9 @@
 NAME = ex00
 
-SRCS =		Fixed.cpp\
+SRCS =		ClapTrap.cpp\
 			main.cpp
 
-INCLUDES =	Fixed.hpp \
+INCLUDES =	ClapTrap.hpp \
 
 OBJ = $(patsubst %.cpp, %.o, $(SRCS))
 

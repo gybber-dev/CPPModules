@@ -3,6 +3,7 @@
 //
 
 #ifndef CPPMODULES_CLAPTRAP_HPP
+#define CPPMODULES_CLAPTRAP_HPP
 
 #include <iostream>
 #include <string>
@@ -18,6 +19,7 @@ public:
 	void attack(std::string const & target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
+	void print() const;
 private:
 	string	m_name;
 	int		m_hitpoints;
@@ -26,7 +28,5 @@ private:
 
 
 };
-
-#define CPPMODULES_CLAPTRAP_HPP
 
 #endif //CPPMODULES_CLAPTRAP_HPP

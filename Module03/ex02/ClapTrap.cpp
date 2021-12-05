@@ -1,0 +1,64 @@
+#include "ClapTrap.hpp"
+
+using std::cout;
+using std::endl;
+
+ClapTrap::ClapTrap() {
+	cout << "ClapTrap's default constructor " << endl;
+	this->m_name = "default name";
+	this->m_hitpoints = 0;
+	this->m_energyPoints = 0;
+	this->m_attackDamage = 0;
+}
+
+ClapTrap::ClapTrap(const string &mName) {
+	cout << "ClapTrap constructor " << mName << endl;
+	this->m_name = mName;
+	this->m_attackDamage = 0;
+	this->m_hitpoints = 10;
+	this->m_energyPoints = 10;
+}
+
+ClapTrap::~ClapTrap() {
+	cout << "ClapTrap destructor " << this->m_name << endl;
+}
+
+void ClapTrap::attack(const std::string &target) {
+	cout << "ClapTrap " << this->m_name << " attack " << target << ", causing " << this->m_attackDamage << " points of damage" << endl;
+}
+
+void ClapTrap::takeDamage(unsigned int amount) {
+	cout << "ClapTrap " << this->m_name << " took " << amount << " points of damage" << endl;
+}
+
+void ClapTrap::beRepaired(unsigned int amount) {
+	cout << "ClapTrap " << this->m_name << " repaired " << amount << " points of damage" << endl;
+}
+
+ClapTrap::ClapTrap(const ClapTrap &src) {
+	cout << "ClapTrap copy constructor" << endl;
+	this->m_name = "copy_" + src.m_name;
+	this->m_attackDamage  = src.m_attackDamage;
+	this->m_hitpoints  = src.m_hitpoints;
+	this->m_energyPoints  = src.m_energyPoints;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &src) {
+	cout << "Assignation operator" << endl;
+	if (this == &src) {
+		return *this;
+	}
+	this->m_name = src.m_name;
+	this->m_attackDamage  = src.m_attackDamage;
+	this->m_hitpoints  = src.m_hitpoints;
+	this->m_energyPoints  = src.m_energyPoints;
+	return *this;
+}
+
+void ClapTrap::print() const {
+	cout << endl << "===== INFORMATION =====" << endl;
+	cout << "name: " << this->m_name << endl;
+	cout << "hitpoints: " << this->m_hitpoints << endl;
+	cout << "energyPoints: " << this->m_energyPoints << endl;
+	cout << "attackDamage: " << this->m_attackDamage << endl << endl;
+}

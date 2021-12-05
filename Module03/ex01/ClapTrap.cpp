@@ -1,6 +1,4 @@
 #include "ClapTrap.hpp"
-#include "../ex02/ClapTrap.hpp"
-
 
 using std::cout;
 using std::endl;
@@ -15,6 +13,10 @@ ClapTrap::ClapTrap(const string &mName) {
 
 ClapTrap::ClapTrap() {
 	cout << "ClapTrap's default constructor" << endl;
+	this->m_name = "default name";
+	this->m_hitpoints = 0;
+	this->m_energyPoints = 0;
+	this->m_attackDamage = 0;
 }
 
 ClapTrap::~ClapTrap() {
@@ -54,13 +56,9 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &src) {
 }
 
 void ClapTrap::print() const {
-	cout << "===== INFORMATION =====" << endl;
+	cout << endl << "===== INFORMATION =====" << endl;
 	cout << "name: " << this->m_name << endl;
 	cout << "hitpoints: " << this->m_hitpoints << endl;
 	cout << "energyPoints: " << this->m_energyPoints << endl;
 	cout << "attackDamage: " << this->m_attackDamage << endl << endl;
-}
-
-ClapTrap::ClapTrap() {
-
 }

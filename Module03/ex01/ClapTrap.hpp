@@ -12,6 +12,7 @@ using std::string;
 
 class ClapTrap {
 public:
+	ClapTrap();
 	ClapTrap(const string &mName);
 	~ClapTrap();
 	ClapTrap(const ClapTrap &src);

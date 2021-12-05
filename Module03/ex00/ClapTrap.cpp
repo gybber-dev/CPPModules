@@ -11,6 +11,10 @@ ClapTrap::ClapTrap(const string &mName) {
 	this->m_energyPoints = 10;
 }
 
+ClapTrap::ClapTrap() {
+	cout << "ClapTrap's default constructor" << endl;
+}
+
 ClapTrap::~ClapTrap() {
 	cout << "Destructor " << this->m_name << endl;
 }
